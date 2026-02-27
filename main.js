@@ -3,7 +3,7 @@ import { supabase } from "./supabase.js";
 console.log("🔥 main.js cargado");
 
 document.addEventListener("DOMContentLoaded", async () => {
-  alert("JS funcionando");
+ 
   const contenedor = document.getElementById("productos");
 
   if (!contenedor) {
