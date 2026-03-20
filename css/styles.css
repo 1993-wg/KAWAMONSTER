@@ -13,10 +13,29 @@ body {
 
 /* Header - mobile first */
 .header {
-    background: #000;
-    color: #00ff66;
-    text-align: center;
-    padding: 1.5rem 1rem;
+    position: relative;
+    min-height: 65vh;                    /* Puedes cambiar a 55vh o 70vh según prefieras */
+    background: url('../images/moto-fondo.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center 30%;     /* Ajusta el enfoque de la moto (30% = más arriba) */
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);     /* Overlay oscuro - puedes bajar a 0.35 si quieres más claro */
+    z-index: 1;
+}
+
+.header > * {
+    position: relative;
+    z-index: 2;
 }
 
 .header img {
